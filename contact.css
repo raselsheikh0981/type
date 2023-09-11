@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Poppins:wght@200;300;400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #080710;
+    font-family: 'Poppins', sans-serif;
+}
+.bacground{
+    width: 280px;
+    height: 400px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+}
+
+.bacground .shape{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+}
+.shape:first-child {
+    background: linear-gradient(#ef910a,#f10a59);
+    border-radius: 50%;
+    top: -20px;
+    left: -20px;
+    animation-name: right;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    position: absolute;
+}
+.shape:last-child {
+    background: linear-gradient(#10a156,#05cbff);
+    border-radius: 50%;
+    right: -20px;
+    bottom: -20px;
+    animation-name: left;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+form {
+    width: 280px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(10px);
+    z-index: 1;
+    position: absolute;
+    border: 2px solid rgba(255, 255, 255, 0.01);
+    box-shadow: 0 0 40px rgba(8,7,16,0,6);
+    padding: 30px 35px;
+    border-radius: 21px;
+}
+form h3 {
+    color: aliceblue;
+    font-size: 23px;
+    text-align: center;
+}
+form span {
+    color: rgb(5, 235, 243);
+    font-size: 13px;
+    display: block;
+    position: relative;
+    top: 3px;
+}
+.input {
+    position: relative;
+    top: 30px;
+}
+.input:only-of-type{
+    color: #ffffff;
+    text-transform: capitalize;
+}
+.text {
+    overflow: hidden;
+}
+.input input{
+    background-color: rgba(255, 255, 255, 0.07);
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 9px 9px;
+    border-radius: 12px;
+    color: white;
+    margin-bottom: 21px;
+}
+
+.input button{
+    width: 80%;
+    border: none;
+    background-color: #0aceffb7;
+    display: block;
+    margin: auto;
+    padding: 7px 9px;
+    border-radius: 12px;
+    color: white;
+    cursor: pointer;
+}
+.input input[type = "reset"]{
+    background-color: #021602;
+    width: 50%;
+    display: block;
+    margin: auto;
+    padding: 5px 5px;
+    margin-top: 22px;
+    cursor: pointer;
+}
+.input input[type = "reset"]:hover{
+    background-color: #ce292960;
+}
+.password {
+    overflow: hidden;
+}
+::placeholder{
+    color: rgb(167, 162, 162);
+}
+@keyframes right{
+   50%{
+        top: 350px;
+    }
+    100%{
+        left: 200px;
+    }
+ 
+}
+
+@keyframes left{
+  
+    50%{
+        bottom: 350px;
+    }
+    100%{
+        right: 200px;
+    }
+}
